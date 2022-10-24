@@ -15,20 +15,26 @@
 // }
 
 //  Solution 2
+// function isUnique(str) {
+//     const chars = new Set()
+    
+//     for (let i = 0; i < str.length; i++) {
+//       const current = str[i]
+    
+//       if (chars.has(current)) {
+//         return false
+//       }
+    
+//       chars.add(current)
+//     }
+//     return true
+// }
+
+//  Solution 3
+
 function isUnique(str) {
-    const chars = new Set()
-    
-    for (let i = 0; i < str.length; i++) {
-      const current = str[i]
-    
-      if (chars.has(current)) {
-        return false
-      }
-    
-      chars.add(current)
-    }
-    return true
-}
+    return new Set(str).size === str.length
+  }
 
 console.log(isUnique('abcdef')) // -> true
 console.log(isUnique('1234567')) // -> true
