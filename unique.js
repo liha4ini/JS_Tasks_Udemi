@@ -5,13 +5,29 @@
 // **Output**: Boolean
 
 // Solution 1
+// function isUnique(str) {
+//      for (let i = 0; i < str.length; i++) {
+//          if (str.lastIndexOf(str[i]) !== i) {
+//            return false
+//          }
+//      }
+//      return true
+// }
+
+//  Solution 2
 function isUnique(str) {
-     for (let i = 0; i < str.length; i++) {
-         if (str.lastIndexOf(str[i]) !== i) {
-           return false
-         }
-     }
-     return true
+    const chars = new Set()
+    
+    for (let i = 0; i < str.length; i++) {
+      const current = str[i]
+    
+      if (chars.has(current)) {
+        return false
+      }
+    
+      chars.add(current)
+    }
+    return true
 }
 
 console.log(isUnique('abcdef')) // -> true
