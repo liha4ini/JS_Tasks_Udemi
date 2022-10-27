@@ -80,7 +80,7 @@ function rememberMyFilms() {
     }
 }
 
-rememberMyFilms();
+// rememberMyFilms();
 
 function detectPersonalLevel() {
     if (personalMovieDB.count < 10) {
@@ -94,6 +94,13 @@ function detectPersonalLevel() {
     }
 }
 
-detectPersonalLevel();
+// detectPersonalLevel();
 
-console.log(personalMovieDB);
+function showMyDB() {
+    if (!personalMovieDB.privat) {
+        console.log(personalMovieDB);
+    }
+}
+
+showMyDB();
+
