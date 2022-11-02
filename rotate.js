@@ -32,3 +32,7 @@ const matrix = [
   
     return newMatrix
 }
+
+function rotate180(source) {
+    return rotate(rotate(source))
+}
